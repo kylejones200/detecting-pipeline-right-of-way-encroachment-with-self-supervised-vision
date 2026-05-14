@@ -22,16 +22,16 @@ For a 10,000-mile pipeline network, the costs are substantial. Monthly aerial pa
 
 ### Encroachment Signatures
 
-**Construction Equipment:**
+Construction Equipment:
 Excavators, backhoes, bulldozers, trenchers—distinctive shapes and colors that cluster in embedding space even without explicit training.
 
-**Ground Disturbance:**
+Ground Disturbance:
 Cleared vegetation, exposed soil, new roads, grading—texture and spectral changes that differ from agricultural patterns.
 
-**New Structures:**
+New Structures:
 Buildings, fences, storage tanks, parking areas—geometric features absent in historical baseline imagery.
 
-**Vegetation Clearing:**
+Vegetation Clearing:
 Linear clearing patterns, stump fields, access trails—spatial patterns inconsistent with seasonal vegetation changes.
 
 Traditional computer vision requires labeled training data for each class. DINOv2 learns representations from 142M unlabeled images, generalizing to construction signatures without pipeline-specific annotations.
@@ -54,7 +54,7 @@ Databricks MLlib provides distributed machine learning for large-scale clusterin
 
 ### Step 1: Load and Tile ROW Imagery
 
-**Output:**
+Output:
 ```
 ======================================================================
 PIPELINE ROW ENCROACHMENT DETECTION - DINOV2 + DATABRICKS
@@ -154,12 +154,12 @@ Williams paid $58 million for missing an encroachment by three days. What's your
 
 ---
 
-**Technology:** Databricks, DINOv2, PySpark MLlib, Delta Lake, Unity Catalog, Sedona, Mosaic  
-**Model:** DINOv2-ViTS/14 (384-dim embeddings, 21M parameters, pre-trained on 142M images)  
-**Scale:** 20,000 tiles/segment, 480M tiles/continental network, <30 min processing  
-**Performance:** 98.5% review workload reduction (200 of 20,000 tiles), 70-80% recall  
-**Cost:** $0.03/mile/day satellite vs $50-200/mile monthly aerial patrol  
-**Detection lag:** 24 hours (daily satellite) vs 15-30 days (monthly patrol)
+Technology: Databricks, DINOv2, PySpark MLlib, Delta Lake, Unity Catalog, Sedona, Mosaic  
+Model: DINOv2-ViTS/14 (384-dim embeddings, 21M parameters, pre-trained on 142M images)  
+Scale: 20,000 tiles/segment, 480M tiles/continental network, <30 min processing  
+Performance: 98.5% review workload reduction (200 of 20,000 tiles), 70-80% recall  
+Cost: $0.03/mile/day satellite vs $50-200/mile monthly aerial patrol  
+Detection lag: 24 hours (daily satellite) vs 15-30 days (monthly patrol)
 
 python
 def initialize_dinov2_pipeline(spark):
