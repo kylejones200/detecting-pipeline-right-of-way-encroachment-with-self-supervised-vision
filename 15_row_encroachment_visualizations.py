@@ -1,6 +1,4 @@
 import signalplot
-import sys
-import os
 
 import logging
 logging.basicConfig(
@@ -16,12 +14,10 @@ Creates minimalist-style visualizations for encroachment detection.
 
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 
 
 
-from pathlib import Path
 
 def apply_minimalist_style_manual(ax):
     """Apply minimalist style components manually to axis."""
@@ -150,7 +146,7 @@ def create_main_embedding_space_plot(plot: bool = False):
                     dpi=300, bbox_inches='tight')
         plt.close()
     
-    logger.info(f"✓ Main embedding space visualization saved")
+    logger.info("✓ Main embedding space visualization saved")
     logger.info(f"  Total images: {len(labels)}")
     logger.info(f"  Encroachments: {n_encroachment} ({n_encroachment/len(labels)*100:.1f}%)")
 
@@ -227,9 +223,9 @@ def create_temporal_encroachment_trend(plot: bool = False):
     # Add annotation for growing trend
         ax.annotate('Growing Vegetation\nEncroachment Trend', 
                    xy=(18, total[18]), xytext=(14, total[18] + 3),
-                   arrowprops=dict(arrowstyle='->', color='black', lw=1.5),
-                   fontsize=9, bbox=dict(boxstyle='round', facecolor='white', 
-                                        edgecolor='black', linewidth=1))
+                   arrowprops={'arrowstyle': '->', 'color': 'black', 'lw': 1.5},
+                   fontsize=9, bbox={'boxstyle': 'round', 'facecolor': 'white', 
+                                        'edgecolor': 'black', 'linewidth': 1})
     
         plt.tight_layout()
         plt.savefig('/Users/k.jones/Desktop/blogs/blog_posts/15_row_encroachment_temporal.png', 
