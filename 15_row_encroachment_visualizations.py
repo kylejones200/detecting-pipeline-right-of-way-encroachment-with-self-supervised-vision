@@ -154,7 +154,7 @@ def create_main_embedding_space_plot(plot: bool = False):
 
         plt.tight_layout()
         plt.savefig(
-            "/Users/k.jones/Desktop/blogs/blog_posts/15_row_encroachment_dinov2_main.png",
+            "outputs/15_row_encroachment_dinov2_main.png",
             dpi=300,
             bbox_inches="tight",
         )
@@ -297,7 +297,7 @@ def create_temporal_encroachment_trend(plot: bool = False):
 
         plt.tight_layout()
         plt.savefig(
-            "/Users/k.jones/Desktop/blogs/blog_posts/15_row_encroachment_temporal.png",
+            "outputs/15_row_encroachment_temporal.png",
             dpi=300,
             bbox_inches="tight",
         )
