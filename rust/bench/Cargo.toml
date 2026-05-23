@@ -1,0 +1,13 @@
+[package]
+name = "detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_bench"
+description = "Standalone Rust benchmark (no Python)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "bench"
+path = "src/main.rs"
+
+[dependencies]
+detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_core = { path = "../core" }

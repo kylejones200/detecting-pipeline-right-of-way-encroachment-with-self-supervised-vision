@@ -1,0 +1,15 @@
+[package]
+name = "detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_rs"
+description = "Python bindings (PyO3) for detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_core = { path = "../core" }
+pyo3 = { version = "0.28", features = ["extension-module"] }
+numpy = "0.28"

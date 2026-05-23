@@ -1,0 +1,9 @@
+[package]
+name = "detecting_pipeline_right_of_way_encroachment_with_self_supervised_vision_core"
+description = "Synthetic 384-d embedding clusters"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+path = "src/lib.rs"
