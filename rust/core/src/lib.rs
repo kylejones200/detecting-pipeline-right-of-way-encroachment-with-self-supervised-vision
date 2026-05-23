@@ -31,7 +31,7 @@ pub fn generate_embedding_clusters(
 ) -> (Vec<f64>, Vec<i32>) {
     let mut rng = Lcg::new(seed);
     let total = n_normal + n_vegetation + n_structure + n_vehicle;
-    let mut embeddings = vec![0.0; total * DIM];
+    let mut embeddings = Vec::with_capacity(total * DIM);
     let mut labels = Vec::with_capacity(total);
 
     let mut push_cluster =
